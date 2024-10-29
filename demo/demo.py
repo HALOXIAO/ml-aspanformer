@@ -15,20 +15,22 @@ import numpy as np
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--config_path', type=str, default='../configs/aspan/outdoor/aspan_test.py',
-  help='path for config file.')
-parser.add_argument('--img0_path', type=str, default='../assets/phototourism_sample_images/piazza_san_marco_06795901_3725050516.jpg',
-  help='path for image0.')
-parser.add_argument('--img1_path', type=str, default='../assets/phototourism_sample_images/piazza_san_marco_15148634_5228701572.jpg',
-  help='path for image1.')
+                    help='path for config file.')
+# parser.add_argument('--img0_path', type=str, default='../assets/phototourism_sample_images/piazza_san_marco_06795901_3725050516.jpg',
+parser.add_argument('--img0_path', type=str, default='../assets/myself/source.jpg',
+
+                    help='path for image0.')
+# parser.add_argument('--img1_path', type=str, default='../assets/phototourism_sample_images/piazza_san_marco_15148634_5228701572.jpg',
+parser.add_argument('--img1_path', type=str, default='../assets/myself/target.jpg',
+                    help='path for image1.')
 parser.add_argument('--weights_path', type=str, default='../weights/outdoor.ckpt',
-  help='path for model weights.')
+                    help='path for model weights.')
 parser.add_argument('--long_dim0', type=int, default=1024,
-  help='resize for longest dim of image0.')
+                    help='resize for longest dim of image0.')
 parser.add_argument('--long_dim1', type=int, default=1024,
-  help='resize for longest dim of image1.')
+                    help='resize for longest dim of image1.')
 
 args = parser.parse_args()
-
 
 if __name__=='__main__':
     config = get_cfg_defaults()
